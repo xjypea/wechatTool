@@ -1,0 +1,25 @@
+<view class="container">
+  <open-data type="userAvatarUrl" class="avatar"></open-data>
+  <open-data type="userNickName" class="nickname"></open-data>
+  <view>
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="userInfo" >授权登录换头像</button>
+  </view>
+  <view>
+    <button bindtap="getUserProfile">获取用户信息</button>
+  </view>
+  <view>
+    <button bindtap="onSub" class="sub"> 订阅消息 </button>
+  </view>
+  <view>
+    <button bindtap="dologin" class="dologin">获取code</button>
+  </view>
+  <view>
+    <button bindtap="location" class="location">获取经纬度</button>
+  </view>
+  <view>
+    <button open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber"  class="getNumber">授权手机号</button>
+  </view>
+  <view>
+    <button bindtap="pay" class="pay">微信支付</button>
+  </view>
+</view>
